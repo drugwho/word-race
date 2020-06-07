@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/scores.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Score Sheet</title>
+</head>
+<body>
+    <div class="container">
+            <div class="grid-left">
+                <div class="name-input">
+                    <p class="name-input-text">NAME <span class="name-input-optional"><em>(optional)</em></span></p>
+                    <input id="name" type="text" class="name-input-box">
+                </div>
+            </div>
+            <div class="grid-center">
+                <div class="score-box">
+                <p class="final-score-header">FINAL SCORE</p>
+                <p id ="score" class="final-score">124</p>
+                </div>
+                <div class="stats-box">
+                    <p class="stat-heading">AVG SCORE</p>
+                    <p class="stat-score">137</p>
+                    <p class="stat-heading">MAX SCORE</p>
+                    <p class="stat-score">191</p>
+                </div>
+                <button class="save-button" onclick="submitAndClear()">&nbsp; &nbsp;save score &nbsp; &nbsp;</button>
+                <button class="play-again-button"><span> &nbsp; play again! &nbsp; </span></button>
+            </div>
+            <div class="grid-right">
+                <div class="stats-box">
+                    <p class="stat-heading">LAST 3 SCORES</p>
+                    <p class="stat-score">140 &nbsp;&nbsp;  01/06</p>
+                    <p class="stat-score">137  &nbsp;&nbsp; 24/05</p>
+                    <p class="stat-score">191  &nbsp;&nbsp; 09/05</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="scores.js"></script>

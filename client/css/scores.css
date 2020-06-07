@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,300&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins";
+  font-style: initial;
+  background: #151515;
+  font-size: 18px;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container .grid-left {
+  margin-top: 2em;
+}
+
+.container .grid-left .name-input .name-input-text {
+  font-size: 1.3em;
+  color: #e5e5e5;
+  margin-top: 0.7em;
+  margin-bottom: 0.9rem;
+}
+
+.container .grid-left .name-input .name-input-text .name-input-optional {
+  margin-left: 0.3em;
+  color: #3b3b3b;
+  font-size: 0.5em;
+}
+
+.container .grid-left .name-input .name-input-box {
+  border: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  background: #151515;
+  width: 14em;
+  height: 3.9em;
+  color: #dedede;
+  font-family: "Poppins";
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.container .grid-center .score-box .final-score-header {
+  font-size: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  color: #dedede;
+}
+
+.container .grid-center .score-box .final-score {
+  font-size: 2.5em;
+  margin-top: 0em;
+  color: #5fff14;
+}
+
+.container .grid-center .stats-box .stat-heading {
+  font-size: 1.3em;
+  color: #e5e5e5;
+  margin-bottom: 0em;
+}
+
+.container .grid-center .stats-box .stat-score {
+  font-size: 1em;
+  color: #e5e5e5;
+  margin-top: 0em;
+}
+
+.container .grid-center .save-button {
+  background: #4a4071;
+  border: 1px solid rgba(185, 175, 224, 0.01);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 14px;
+  text-align: center;
+  font-family: Poppins;
+  color: #e5e5e5;
+  font-weight: lighter;
+  font-size: 1em;
+  padding: 0.3em;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.container .grid-center .play-again-button {
+  background: #4a4071;
+  border: 1px solid rgba(185, 175, 224, 0.01);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 14px;
+  font-family: Poppins;
+  color: #e5e5e5;
+  font-weight: lighter;
+  font-size: 1em;
+  padding: 0.3em;
+  margin-left: 1.8em;
+  margin-right: 1em;
+}
+
+.container .grid-center .play-again-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .grid-center .play-again-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .grid-center .play-again-button:hover span {
+  padding-right: 25px;
+}
+
+.container .grid-center .play-again-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.container .grid-right .stats-box .stat-heading {
+  font-size: 1.3em;
+  color: #e5e5e5;
+  margin-bottom: 0em;
+}
+
+.container .grid-right .stats-box .stat-score {
+  font-size: 1em;
+  color: #e5e5e5;
+  margin-top: 0em;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    margin-bottom: 1em;
+    -ms-grid-columns: 33.333% 33.333% 33.333%;
+        grid-template-columns: 33.333% 33.333% 33.333%;
+  }
+  .container .grid-left {
+    text-align: left;
+    margin-top: 11.8em;
+    margin-left: 3em;
+  }
+  .container .grid-left .name-input .name-input-text {
+    font-size: 2em;
+  }
+  .container .grid-center .score-box .final-score-header {
+    font-size: 3.5em;
+  }
+  .container .grid-center .stats-box {
+    text-align: left;
+    margin-bottom: 7em;
+  }
+  .container .grid-center .stats-box .stat-heading {
+    font-size: 2em;
+  }
+  .container .grid-center .stats-box .stat-score {
+    font-size: 2em;
+  }
+  .container .grid-right {
+    margin-top: 11.2em;
+  }
+  .container .grid-right .stats-box .stat-heading {
+    font-size: 2em;
+  }
+  .container .grid-right .stats-box .stat-score {
+    font-size: 2em;
+  }
+}
+/*# sourceMappingURL=scores.css.map */

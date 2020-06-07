@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,300&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins";
+  font-weight: lighter;
+  font-style: initial;
+  background: #151515;
+  font-size: 18px;
+  height: 100vh;
+}
+
+#container-3 {
+  width: 1032px;
+}
+
+#keyboard {
+  margin-top: 0em;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
+
+#keyboard li {
+  float: left;
+  margin: 0 5px 5px 0;
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-weight: 600;
+  line-height: 60px;
+  text-align: center;
+  background: #646464;
+  border: 1px solid #646464;
+  -moz-border-radius: 4.5px;
+  -webkit-border-radius: 4.5px;
+}
+
+.capslock,
+.tab,
+.left-shift {
+  clear: left;
+}
+
+#keyboard .tab,
+#keyboard .delete {
+  width: 105px;
+}
+
+#keyboard .capslock {
+  width: 120px;
+}
+
+#keyboard .return {
+  width: 112.5px;
+}
+
+#keyboard .left-shift {
+  color: black;
+  background-color: #d3d3d3;
+  width: 142.5px;
+}
+
+#keyboard .right-shift {
+  color: black;
+  background-color: #d3d3d3;
+  width: 157.5px;
+}
+
+.lastitem {
+  margin-right: 0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+#keyboard .space {
+  clear: left;
+  width: 975.912px;
+}
+
+.on {
+  display: none;
+}
+
+.keypressed {
+  color: #000 !important;
+  background-color: #97ff73 !important;
+}
+
+.wrong-key-pressed {
+  color: #fff !important;
+  background-color: #ff7373 !important;
+}
+
+.container-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.container-1 .left {
+  text-align: right;
+  margin-right: 12em;
+}
+
+.container-1 .left .container-1-score-header {
+  font-size: 4.5em;
+  color: #e5e5e5;
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+.container-1 .container-1-score-number {
+  margin-bottom: 0em;
+  margin-top: 0em;
+  font-size: 2.5em;
+  color: #e5e5e5;
+}
+
+.container-1 .right {
+  margin-left: 4em;
+  margin-right: 12em;
+  text-align: right;
+}
+
+.container-1 .right .container-1-mul-header {
+  font-size: 4.5em;
+  color: #e5e5e5;
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+.container-1 .right .container-1-mul-number {
+  margin-bottom: 0em;
+  margin-top: 0em;
+  font-size: 2.5em;
+  color: #e5e5e5;
+  text-align: end;
+}
+
+.container-2 {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.container-2 .container-2-bg {
+  background-color: #2d2d2d;
+  margin-left: 10em;
+  margin-right: 10em;
+  border-radius: 30px;
+}
+
+.container-2 .container-2-inner-1 {
+  margin-bottom: 2em;
+}
+
+.container-2 .container-2-inner-1 .container-2-give-text {
+  font-size: 1.5em;
+  color: #05fa00;
+  padding: 0.9em;
+}
+
+.container-2 .container-2-inner-2 .container-2-test-text {
+  font-size: 1.5em;
+  color: #e5e5e5;
+  padding: 0.9em;
+  margin-bottom: 0em;
+}
+
+.container-3 {
+  text-align: center;
+  margin-top: 0em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+}
+
+.container-3 .container-3-cool-bg {
+  margin: 0 auto;
+}
+
+.container-3 .button-class {
+  margin-top: 2em;
+}
+
+.container-3 .button-class .submit {
+  text-align: center;
+  background: #4a4071;
+  border: 1px solid rgba(185, 175, 224, 0.01);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 14px;
+  font-family: "Poppins";
+  font-weight: lighter;
+  color: #e5e5e5;
+  font-size: 2em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+
+.null-texts {
+  padding: 1.65em !important;
+}
+/*# sourceMappingURL=game.css.map */

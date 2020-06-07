@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/game.css" />
+    <title>Game</title>
+  </head>
+
+  <body>
+    <div class="container-1">
+      <div class="left">
+        <p class="container-1-score-header">
+          SCORE
+        </p>
+        <p id="score" class="container-1-score-number">
+          142
+        </p>
+      </div>
+      <div class="right">
+        <p class="container-1-mul-header">
+          MULTIPLIER
+        </p>
+        <p id="multiplier" class="container-1-mul-number"></p>
+      </div>
+    </div>
+    <div class="container-2">
+      <div class="container-2-inner-1">
+        <div class="container-2-bg">
+          <div id="words-array" class="container-2-give-text"></div>
+        </div>
+      </div>
+      <div class="container-2-inner-2">
+        <div class="container-2-bg">
+          <div class="container-2-test-text" id="change-make">
+            the quick brown fox
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-3">
+      <div class="container-3-cool-bg">
+        <ul id="keyboard">
+          <li class="symbol">
+            <span class="off">`</span><span class="on">~</span>
+          </li>
+          <li id="Digit1" class="symbol">
+            <span class="off">1</span><span class="on">!</span>
+          </li>
+          <li id="Digit2" class="symbol">
+            <span class="off">2</span><span class="on">@</span>
+          </li>
+          <li id="Digit3" class="symbol">
+            <span class="off">3</span><span class="on">#</span>
+          </li>
+          <li id="Digit4" class="symbol">
+            <span class="off">4</span><span class="on">$</span>
+          </li>
+          <li id="Digit5" class="symbol">
+            <span class="off">5</span><span class="on">%</span>
+          </li>
+          <li id="Digit6" class="symbol">
+            <span class="off">6</span><span class="on">^</span>
+          </li>
+          <li id="Digit7" class="symbol">
+            <span class="off">7</span><span class="on">&amp;</span>
+          </li>
+          <li id="Digit8" class="symbol">
+            <span class="off">8</span><span class="on">*</span>
+          </li>
+          <li id="Digit9" class="symbol">
+            <span class="off">9</span><span class="on">(</span>
+          </li>
+          <li id="Digit0" class="symbol">
+            <span class="off">0</span><span class="on">)</span>
+          </li>
+          <li class="symbol">
+            <span class="off">-</span><span class="on">_</span>
+          </li>
+          <li class="symbol">
+            <span class="off">=</span><span class="on">+</span>
+          </li>
+          <li id="Backspace" class="delete lastitem">delete</li>
+          <li class="tab">tab</li>
+          <li id="KeyQ" class="letter">q</li>
+          <li id="KeyW" class="letter">w</li>
+          <li id="KeyE" class="letter">e</li>
+          <li id="KeyR" class="letter">r</li>
+          <li id="KeyT" class="letter">t</li>
+          <li id="KeyY" class="letter">y</li>
+          <li id="KeyU" class="letter">u</li>
+          <li id="KeyI" class="letter">i</li>
+          <li id="KeyO" class="letter">o</li>
+          <li id="KeyP" class="letter">p</li>
+          <li class="symbol">
+            <span class="off">[</span><span class="on">{</span>
+          </li>
+          <li class="symbol">
+            <span class="off">]</span><span class="on">}</span>
+          </li>
+          <li class="symbol lastitem">
+            <span class="off">\</span><span class="on">|</span>
+          </li>
+          <li class="capslock">caps lock</li>
+          <li id="KeyA" class="letter">a</li>
+          <li id="KeyS" class="letter">s</li>
+          <li id="KeyD" class="letter">d</li>
+          <li id="KeyF" class="letter">f</li>
+          <li id="KeyG" class="letter">g</li>
+          <li id="KeyH" class="letter">h</li>
+          <li id="KeyJ" class="letter">j</li>
+          <li id="KeyK" class="letter">k</li>
+          <li id="KeyL" class="letter">l</li>
+          <li class="symbol">
+            <span class="off">;</span><span class="on">:</span>
+          </li>
+          <li class="symbol">
+            <span class="off">'</span><span class="on">&quot;</span>
+          </li>
+          <li id="Enter" class="return lastitem">return</li>
+          <li class="left-shift">shift</li>
+          <li id="KeyZ" class="letter">z</li>
+          <li id="KeyX" class="letter">x</li>
+          <li id="KeyC" class="letter">c</li>
+          <li id="KeyV" class="letter">v</li>
+          <li id="KeyB" class="letter">b</li>
+          <li id="KeyN" class="letter">n</li>
+          <li id="KeyM" class="letter">m</li>
+          <li class="symbol">
+            <span class="off">,</span><span class="on">&lt;</span>
+          </li>
+          <li class="symbol">
+            <span class="off">.</span><span class="on">&gt;</span>
+          </li>
+          <li class="symbol">
+            <span class="off">/</span><span class="on">?</span>
+          </li>
+          <li class="right-shift lastitem">shift</li>
+          <li id="Space" class="space lastitem">Space &nbsp;</li>
+        </ul>
+      </div>
+      <div class="button-class">
+        <a
+          href="scoresheet.html"
+          onclick="sessionStorage.setItem('Score', defaultScore);"
+          ><button class="submit">submit</button></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+<script src="app.js"></script>
