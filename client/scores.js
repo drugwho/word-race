@@ -18,11 +18,9 @@ document.getElementById("name").onkeyup = function () {
   var name = this.value;
   sessionStorage.setItem("Name", name);
 };
+const http = new XMLHttpRequest();
 
-async function fetchAsync(url) {
-  let response = await fetch(url);
-  let data = await response.json();
-  return data;
-}
-let a = fetchAsync("'https://jsonplaceholder.typicode.com/todos/1");
-console.log(a);
+http.open("GET", "https://word-race.herokuapp.com/");
+http.send();
+
+http.onload = () => console.log(http.responseText);
