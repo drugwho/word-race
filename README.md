@@ -3,7 +3,7 @@ An interactive typing game, created useing Vanilla JS, HTML5 and CSS3. Backend i
 
 # Installation Instructions 🚀
 
-### After cloning into the project, cd into waor-race-master and
+### After cloning into the project, cd into word-race-master and
 ### Add a default.json file in config folder with the following
 
 ```
