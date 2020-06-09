@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/scores.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Score Sheet</title>
 </head>
 <body>
     <div class="container">
             <div class="grid-left">
                 <div class="name-input">
-                    <p class="name-input-text">NAME <span class="name-input-optional"><em>(optional)</em></span></p>
+                    <p class="name-input-text">NAME <span class="name-input-optional"><em>(saving is optional)</em></span></p>
                     <input id="name" type="text" class="name-input-box">
                 </div>
             </div>
@@ -27,7 +26,7 @@
                     <p id="max" class="stat-score">loading</p>
                 </div>
                 <button class="save-button" onclick="submitAndClear()">&nbsp; &nbsp;save score &nbsp; &nbsp;</button>
-                <a href="./main.html"><button class="play-again-button" onclick="window.location.href='./main.html'"><span> &nbsp; play again! &nbsp; </span></button></a>
+                <a href="./index.html"><button class="play-again-button" onclick="window.location.href='./main.html'"><span> &nbsp; play again! &nbsp; </span></button></a>
             </div>
             <div class="grid-right">
                 <div class="stats-box">
