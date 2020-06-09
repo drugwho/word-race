@@ -14,6 +14,7 @@ function addElement(parentId, elementTag, elementId, html) {
   newElement.innerHTML = html;
   p.appendChild(newElement);
 }
+// Check to see if the game has been played or not
 if (scoreDisplay === null) {
   document.getElementById("score").innerHTML = "PLAY THE GAME!";
   removeElement("name");
@@ -26,14 +27,19 @@ if (scoreDisplay === null) {
 } else {
   document.getElementById("score").textContent = scoreDisplay;
 }
-
+// function called onclick of "save score" button
 function submitAndClear() {
+  // use a state variable to allow only one submit
   if (submitState == 0) {
     finalDisplay = scoreDisplay;
     nameDisplay2 = sessionStorage.getItem("Name");
+
     document.getElementById("score").textContent = `score saved!`;
+
+    // JSON construction to POST score
     let toSend = { name: String(nameDisplay2), score: String(scoreDisplay) };
-    console.log(JSON.stringify(toSend));
+
+    // check to see if name is empyty
     if ("Name" in sessionStorage === false) {
       document.getElementById("score").textContent = "Enter Name";
     }
@@ -53,19 +59,19 @@ function submitAndClear() {
       sessionStorage.clear();
       submitState = 1;
     } else {
+      // check to see if name is empyty - bug where name entered and then removed resulting in "" name value is fixed
       document.getElementById("score").textContent = "Enter Name";
       return;
     }
-    // console.log("in function");
   }
 }
+// code to listen to any key event in the text input box
 document.getElementById("name").onkeyup = function () {
   var name = this.value;
   sessionStorage.setItem("Name", name);
 };
-let test = null;
-const http = new XMLHttpRequest();
 
+// fetch and display relevant statistics and last 3 scores.
 let obj;
 let a;
 fetch("https://word-race.herokuapp.com/api/scores")
