@@ -37,7 +37,7 @@ function submitAndClear() {
     if ("Name" in sessionStorage === false) {
       document.getElementById("score").textContent = "Enter Name";
     }
-    if (submitState == 0 && "Name" in sessionStorage === true) {
+    if (submitState == 0 && "Name" in sessionStorage === true && Name !== "") {
       fetch("https://word-race.herokuapp.com/api/scores", {
         method: "POST",
         body: JSON.stringify(toSend),
