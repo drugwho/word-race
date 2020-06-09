@@ -6,10 +6,7 @@ temp = document.getElementById("change-make").textContent;
 
 let giveText = document.getElementById("words-array");
 
-let words = document
-  .getElementById("words-array")
-  .textContent.trim()
-  .split(" ");
+let words = document.getElementById("words-array").textContent.trim().split(" ");
 
 let combo = 0;
 let multiplier = 1;
@@ -30,34 +27,40 @@ function giveWords() {
   randomInt = Math.floor(Math.random() * 1049);
   return l[randomInt];
 }
-// rate is not getting updated
+
+function checkEmptiness() {
+  if (document.getElementById("change-make").textContent == "") {
+    document.getElementById("change-make").classList.add("null-texts");
+  } else {
+    document.getElementById("change-make").classList.remove("null-texts");
+  }
+  if (document.getElementById("words-array").textContent == "") {
+    document.getElementById("words-array").classList.add("null-texts");
+  } else {
+    document.getElementById("words-array").classList.remove("null-texts");
+  }
+}
+
 let rate = 3000;
-let timer = setInterval(function getWords() {
+var myFunction = function () {
+  rate *= 0.97;
   if (words.length < stackspace) {
     giveText.textContent += ` ${giveWords()}`;
-    rate *= 0.1;
-    // console.log(rate);
-    words = document
-      .getElementById("words-array")
-      .textContent.trim()
-      .split(" ");
+    checkEmptiness();
+    words = document.getElementById("words-array").textContent.trim().split(" ");
+    setTimeout(myFunction, rate);
   } else {
-    clearInterval(timer);
-    // console.log("done!");
     words = new Array();
     sessionStorage.setItem("Score", defaultScore);
     document.getElementById("words-array").textContent = "";
     document.getElementById("words-array").textContent = "Game Over";
     document.getElementById("change-make").textContent = "Hit Submit!";
-    console.clear()(
-      // document.getElementById("change-make").textContent =
-      "Game Over. Hit Submit!"
-    );
     document.onkeydown = function (e) {
       return false;
     };
   }
-}, rate);
+};
+setTimeout(myFunction, rate);
 
 let count = 0;
 let letterCount = 0;
@@ -65,6 +68,7 @@ let letterCount = 0;
 // input Start
 document.addEventListener("keydown", (e) => {
   try {
+    checkEmptiness();
     let key = document.getElementById(`${e.code}`);
     if (e.key == "Backspace") {
       e.preventDefault();
@@ -79,7 +83,7 @@ document.addEventListener("keydown", (e) => {
         } else {
           combo = 0;
           multiplier = 1;
-          var snd = new Audio("error.wav"); // buffers automatically when created
+          var snd = new Audio("error.wav");
           snd.play();
           multiplierText.textContent = `${multiplier}x`;
           key.classList.add("wrong-key-pressed");
@@ -89,11 +93,8 @@ document.addEventListener("keydown", (e) => {
     if (e.key == "Enter") {
       if (temp == words[0]) {
         endTime = Date.now() - nowTime;
-
         times.push(endTime / 1000);
-
         nowTime = Date.now();
-
         temp = "";
         document.getElementById("change-make").textContent = "";
         words.shift();
@@ -107,11 +108,9 @@ document.addEventListener("keydown", (e) => {
           combo = 0;
         }
         times.push(endTime / 1000);
-        console.log("is this even right?");
         scoreTemp = Number(defaultScore);
         scoreTemp += (21 - Math.floor(times[times.length - 1])) * multiplier;
         defaultScore = String(scoreTemp);
-        console.log(defaultScore);
         document.getElementById("score").textContent = String(defaultScore);
         nowTime = Date.now();
       }
